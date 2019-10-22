@@ -10,6 +10,8 @@
 
 package frc.robot;
 
+import java.sql.Time;
+
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.*;
 import edu.wpi.first.wpilibj.PWM;
@@ -20,10 +22,10 @@ import edu.wpi.first.wpilibj.SerialPort.*;
 import edu.wpi.first.wpilibj.I2C;
 import edu.wpi.first.wpilibj.SerialPort.Port;
 import edu.wpi.first.wpilibj.DriverStation;
-import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj.CameraServer;
+import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 
@@ -38,7 +40,7 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
  * project.
  */
 
-public class Robot extends IterativeRobot {
+public class Robot extends TimedRobot {
   TalonSRX left1, left2, right1, right2, dongerDeployer, gate;
   Joystick pad;
   I2C wire;
